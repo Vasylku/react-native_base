@@ -1,2 +1,5 @@
-function Allplaces() {}
-export default Allplaces;
+import PlacesList from "../components/PlacesList";
+function AllPlaces() {
+	return <PlacesList />;
+}
+export default AllPlaces;
