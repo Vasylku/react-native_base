@@ -9,16 +9,8 @@ import IconButton from "./UI/IconButton";
 import { Colors } from "./constants/colors";
 import { useEffect } from "react";
 
+const Stack = createNativeStackNavigator();
 export default function App() {
-	const Stack = createNativeStackNavigator();
-	useEffect(() => {
-		async function getNavGone() {
-			await NavigationBar.setBackgroundColorAsync("transparent");
-		}
-
-		getNavGone();
-	}, []);
-
 	return (
 		<>
 			<StatusBar style="dark" />
@@ -34,8 +26,7 @@ export default function App() {
 						name="AllPlaces"
 						component={AllPlaces}
 						options={({ navigation }) => ({
-							title: "Favorite Places",
-
+							title: "Your Favorite Places",
 							headerRight: ({ tintColor }) => (
 								<IconButton
 									icon="add"
@@ -50,20 +41,12 @@ export default function App() {
 						name="AddPlace"
 						component={AddPlace}
 						options={{
-							title: "Add Place",
+							title: "Add a new Place",
 						}}
 					/>
+					<Stack.Screen name="Map" component={Map} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		</>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-});

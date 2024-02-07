@@ -1,4 +1,5 @@
 import { Image, Pressable, StyleSheet, Text } from "react-native";
+import { Colors } from "../constants/colors";
 
 function PlaceItem({ place, onSelect }) {
 	return (
