@@ -5,9 +5,8 @@ import {
 	PermissionStatus,
 } from "expo-image-picker";
 import { useState } from "react";
-
-import { Colors } from "../../constants/colors";
-import OutlinedButton from "../UI/OutlinedButton";
+import { Colors } from "../constants/colors";
+import OutlinedButton from "../UI/OutlineButton";
 
 function ImagePicker({ onTakeImage }) {
 	const [pickedImage, setPickedImage] = useState();

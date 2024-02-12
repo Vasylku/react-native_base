@@ -12,8 +12,8 @@ import {
 } from "@react-navigation/native";
 
 import { Colors } from "../constants/colors";
-import OutlinedButton from "../UI/OutlinedButton";
-import { getAddress, getMapPreview } from "../../util/location";
+import OutlinedButton from "../UI/OutlineButton";
+import { getAddress, getMapPreview } from "../utils/location";
 
 function LocationPicker({ onPickLocation }) {
 	const [pickedLocation, setPickedLocation] = useState();

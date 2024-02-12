@@ -1,15 +1,9 @@
 import { useCallback, useState } from "react";
-import {
-	View,
-	Text,
-	ScrollView,
-	TextInput,
-	StyleSheet,
-	Button,
-} from "react-native";
+import { View, Text, ScrollView, TextInput, StyleSheet } from "react-native";
 import { Colors } from "../constants/colors";
 import ImagePicker from "./ImagePicker";
 import LocationPicker from "./LocationPicker";
+import Button from "../UI/Button";
 
 function PlaceForm() {
 	const [enteredTitle, setEnteredTitle] = useState("");
